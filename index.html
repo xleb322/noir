@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="NOIR — moderne Premium-Mode mit klaren Linien, ausgewählten Materialien und zeitlosem Design.">
+  <title>NOIR — Contemporary Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="canvas-overlay" aria-hidden="true"></div>
+  <div id="preloader" aria-label="NOIR lädt">
+    <div class="preloader-mark">N.</div><div class="preloader-bar"><span></span></div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="logo" aria-label="NOIR – Startseite">NOIR<span class="logo-dot">.</span></a>
+      <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
+        <a href="#catalog" class="nav-link">Shop</a><a href="#categories" class="nav-link">Kategorien</a><a href="#about" class="nav-link">Über NOIR</a><a href="#footer" class="nav-link">Kontakt</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-wrap" id="search-wrap"><input type="search" id="search-input" class="search-input" placeholder="Artikel suchen …" autocomplete="off" aria-label="Artikel suchen"><button class="icon-btn" id="search-toggle" aria-label="Suche öffnen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+        <button class="icon-btn" id="fav-toggle" aria-label="Favoriten öffnen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="badge" id="fav-count">0</span></button>
+        <button class="icon-btn" id="cart-toggle" aria-label="Warenkorb öffnen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg><span class="badge" id="cart-count">0</span></button>
+        <button class="burger" id="burger-toggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-text" data-reveal>
+          <p class="eyebrow" data-reveal-child>Neue Saison · Limitierte Auswahl</p>
+          <h1 class="hero-title"><span class="hero-title-line" data-reveal-child>BEYOND</span><span class="hero-title-line hero-title-outline" data-reveal-child>STYLE</span></h1>
+          <p class="hero-sub" data-reveal-child>Mode mit Haltung. Klare Formen, starke Materialien und Details, die für sich sprechen.</p>
+          <div class="hero-cta-row" data-reveal-child><a href="#catalog" class="btn btn-primary"><span>Kollektion entdecken</span></a><a href="#about" class="btn btn-ghost">Unsere Philosophie</a></div>
+          <div class="hero-stats" data-reveal-child><div class="stat"><span class="stat-num">14</span><span class="stat-label">kuratierte Styles</span></div><div class="stat"><span class="stat-num">01</span><span class="stat-label">klare Ästhetik</span></div><div class="stat"><span class="stat-num">∞</span><span class="stat-label">neu kombinierbar</span></div></div>
+        </div>
+        <div class="hero-visual" data-reveal-child><div class="hero-frame"><div class="hero-glow"></div><img src="images/hero-model.jpg" alt="Editorial-Look aus der NOIR-Kollektion" class="hero-photo" id="hero-photo"><div class="hero-figure-fallback" id="hero-fallback" aria-hidden="true"><svg viewBox="0 0 300 460" fill="none"><path d="M150 40c22 0 40 18 40 40s-18 40-40 40-40-18-40-40 18-40 40-40Z" stroke="currentColor" stroke-width="1.2" opacity=".8"/><path d="M150 122c-46 0-86 26-92 70l-14 130c-2 16 10 30 26 30h20l6-118 8 210c1 14 12 24 26 24h40c14 0 25-10 26-24l8-210 6 118h20c16 0 28-14 26-30l-14-130c-6-44-46-70-92-70Z" stroke="currentColor" stroke-width="1.2" opacity=".6"/><path d="M80 170 40 260 M220 170 260 260" stroke="currentColor" stroke-width="1" opacity=".4"/></svg><span class="fallback-caption">NOIR · Editorial Collection</span></div><div class="hero-tag hero-tag-1">Limited Selection</div><div class="hero-tag hero-tag-2">NOIR / 01</div></div></div>
+      </div><a href="#categories" class="scroll-cue" aria-label="Weiter nach unten scrollen"><span></span></a>
+    </section>
+
+    <section class="categories" id="categories"><div class="section-inner"><p class="section-eyebrow" data-reveal-child>Entdecken</p><h2 class="section-title" data-reveal-child>Finde deinen Look</h2><div class="cat-grid">
+      <button class="cat-card active" data-category="all" data-reveal-child><span class="cat-name">Alle Artikel</span><span class="cat-count" data-count-for="all">14</span></button>
+      <button class="cat-card" data-category="hoodies" data-reveal-child><span class="cat-name">Hoodies</span><span class="cat-count" data-count-for="hoodies">0</span></button>
+      <button class="cat-card" data-category="jackets" data-reveal-child><span class="cat-name">Jacken</span><span class="cat-count" data-count-for="jackets">0</span></button>
+      <button class="cat-card" data-category="pants" data-reveal-child><span class="cat-name">Hosen</span><span class="cat-count" data-count-for="pants">0</span></button>
+      <button class="cat-card" data-category="sneakers" data-reveal-child><span class="cat-name">Sneaker</span><span class="cat-count" data-count-for="sneakers">0</span></button>
+      <button class="cat-card" data-category="accessories" data-reveal-child><span class="cat-name">Accessoires</span><span class="cat-count" data-count-for="accessories">0</span></button>
+    </div></div></section>
+
+    <section class="catalog" id="catalog"><div class="section-inner"><div class="catalog-head"><div><p class="section-eyebrow" data-reveal-child>NOIR Selection</p><h2 class="section-title" data-reveal-child>Aktuelle Favoriten</h2></div><div class="catalog-filters" data-reveal-child><label class="filter-label" for="price-range">Preis bis <span id="price-range-value">600,00 €</span></label><input type="range" id="price-range" min="40" max="600" step="10" value="600" class="price-range" aria-label="Maximalpreis"><select id="sort-select" class="sort-select" aria-label="Artikel sortieren"><option value="default">Sortierung: Standard</option><option value="price-asc">Preis: aufsteigend</option><option value="price-desc">Preis: absteigend</option><option value="name-asc">Name: A–Z</option></select></div></div><div class="product-grid" id="product-grid"></div><div class="empty-state" id="empty-state" hidden><p>Keine Artikel gefunden.</p><button class="btn btn-ghost" id="reset-filters-btn">Filter zurücksetzen</button></div></div></section>
+
+    <section class="about" id="about"><div class="section-inner about-inner"><div class="about-visual" data-reveal-child><div class="about-frame"><span class="about-frame-mark">NOIR</span></div></div><div class="about-text" data-reveal-child><p class="section-eyebrow">Unsere Philosophie</p><h2 class="section-title">Weniger, aber mit Bedeutung.</h2><p class="about-p">NOIR steht für eine reduzierte Ästhetik: klare Silhouetten, durchdachte Proportionen und Farben, die sich mühelos kombinieren lassen.</p><p class="about-p">Wir setzen auf ausgewählte Designs statt kurzlebiger Trends. Jedes Teil soll sich gut anfühlen, vielseitig tragbar sein und lange Teil deiner Garderobe bleiben.</p><div class="about-values"><div class="value-item"><span class="value-num">01</span><span>Bewusst ausgewählte Materialien</span></div><div class="value-item"><span class="value-num">02</span><span>Klare, vielseitige Silhouetten</span></div><div class="value-item"><span class="value-num">03</span><span>Liebe zum Detail</span></div></div></div></div></section>
+  </main>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Warenkorb"><div class="drawer-head"><h3>Warenkorb</h3><button class="drawer-close" id="cart-close" aria-label="Warenkorb schließen">✕</button></div><div class="drawer-body" id="cart-items"></div><div class="drawer-empty" id="cart-empty"><p>Dein Warenkorb ist noch leer.</p><span>Vielleicht wartet dein neues Lieblingsteil schon.</span></div><div class="drawer-footer" id="cart-footer"><div class="drawer-total-row"><span>Gesamtsumme</span><span id="cart-total">0,00 €</span></div><button class="btn btn-primary btn-block" id="checkout-btn">Zur Kasse</button><p class="checkout-note">Demo-Shop · Es wird keine echte Bestellung ausgelöst.</p></div></aside>
+  <aside class="drawer" id="fav-drawer" aria-label="Favoriten"><div class="drawer-head"><h3>Deine Favoriten</h3><button class="drawer-close" id="fav-close" aria-label="Favoriten schließen">✕</button></div><div class="drawer-body" id="fav-items"></div><div class="drawer-empty" id="fav-empty"><p>Noch nichts gespeichert.</p><span>Speichere Artikel über das Herzsymbol.</span></div></aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer" id="footer"><div class="section-inner footer-inner"><div class="footer-top"><div class="footer-brand"><a href="#hero" class="logo">NOIR<span class="logo-dot">.</span></a><p class="footer-tagline">Zeitgemäße Mode. Reduziert auf das Wesentliche.</p><div class="footer-social"><a href="https://www.instagram.com/tr0_0s/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c0 3 2.3 5 5 5"/></svg></a><a href="https://t.me/damn_akurok" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m21 4-19 8 6 2m13-10-3 15-8-7m11-8-8 7"/></svg></a><a href="mailto:hello@noir-shop.example" aria-label="E-Mail schreiben" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></div></div><div class="footer-col"><h4>Shop</h4><a href="#catalog">Alle Artikel</a><a href="#categories">Kategorien</a><a href="#about">Über NOIR</a></div><div class="footer-col"><h4>Service</h4><a href="#footer" data-demo-link>Versand</a><a href="#footer" data-demo-link>Rückgabe</a><a href="#footer" data-demo-link>Größenberatung</a></div><div class="footer-col"><h4>Newsletter</h4><p class="footer-note">Neue Drops und ausgewählte Updates – direkt in dein Postfach.</p><form class="newsletter-form" id="newsletter-form"><input type="email" placeholder="Deine E-Mail-Adresse" required class="newsletter-input" aria-label="Deine E-Mail-Adresse"><button type="submit" class="btn btn-primary btn-small">Anmelden</button></form></div></div><div class="footer-bottom"><span>© <span id="year"></span> NOIR. Alle Rechte vorbehalten.</span><span class="footer-made">Mit Blick fürs Detail gestaltet.</span></div></div></footer>
+  <button class="to-top" id="to-top" aria-label="Nach oben">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
